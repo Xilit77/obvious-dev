@@ -62,9 +62,10 @@ add_filter('wp_nav_menu','add_menuclass');
 
 // Réduire le nombre de mot dans l'extrait des textes
 function custom_excerpt_length( $length ) {
-	return 10;
+	return 22;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 
 function portfoliobg_post_nav() {
     // Don't print empty markup if there's nowhere to navigate.

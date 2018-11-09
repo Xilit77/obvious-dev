@@ -1,45 +1,32 @@
 
-    <section class="bg bg-grey">
+    <section class="newsletter bg-grey">
         <div class="container">
-            <div class="row">
-            <div class="col-md-12 color-white">
-                <h3>Newslater</h3>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <input class="form-control" type="text" id="text-input" placeholder="Votre nom">
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <input class="form-control" type="text" id="text-input" placeholder="Votre entreprise">
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <input class="form-control" type="text" id="text-input" placeholder="Votre numéro de téléphone">
-            </div>
-            <div class="col-md-8">
-                <textarea class="form-control" id="textarea-input" rows="5">Hello World!</textarea>
-            </div>
-            <div class="col-md-12">
-                <div class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" id="ex-check-2" checked="">
-                    <label class="custom-control-label" for="ex-check-2">J’accepte également de recevoir des offres commerciales et promotionnelles d’Obvious.</label>
-                    
+                <div class="newsletter--title">
+                    <h3>Newsletter</h3>
                 </div>
-            </div>
-            <?php
-            // Start the loop.
-            while ( have_posts() ) : the_post();
+                <div class="newsletter_content">
+                    <div class="newsletter_inputs">
+                        <div class="newsletter_input">
+                            <input class="form-control" type="text" id="text-input" placeholder="Votre nom">
+                        </div>
+                        <div class="newsletter_input">
+                            <input class="form-control" type="text" id="text-input" placeholder="Votre entreprise">
+                        </div>
+                        <div class="newsletter_input">
+                            <input class="form-control" type="text" id="text-input" placeholder="Votre numéro de téléphone">
+                        </div>
+                    </div>  
+                        <div class="newsletter_textarea">
+                            <textarea class="form-control" id="textarea-input" rows="5">Hello World!</textarea>
+                        </div>
+                        <div class="newsletter_checkbox">
+                                <input class="custom-control-input" type="checkbox" id="ex-check-2" checked="">
+                                <p class="newsletter_checkbox--text"><label class="custom-control-label" for="ex-check-2">J’accepte également de recevoir des offres commerciales et promotionnelles d’Obvious.</label></p>
+                                
+                            </div>
+                        </div>
+                    </div>
 
-                // Include the page content template.
-                get_template_part( 'content', 'page' );
-
-                the_content();
-                // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;
-
-            // End the loop.
-            endwhile;
-            ?>
 
             <div class="col-md-12">
                 <button id="cta-home" class="btn btn-primary float-left">Envoyer !</button>
